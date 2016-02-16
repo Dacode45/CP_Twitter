@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		687FDB651C72F944007C9848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687FDB631C72F944007C9848 /* Main.storyboard */; };
 		68C133C01C72A2BD00D09F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */; };
 		68C133C21C72A2BD00D09F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133C11C72A2BD00D09F3D /* ViewController.swift */; };
-		68C133C51C72A2BD00D09F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C133C31C72A2BD00D09F3D /* Main.storyboard */; };
 		68C133C71C72A2BD00D09F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C133C61C72A2BD00D09F3D /* Assets.xcassets */; };
 		68C133CA1C72A2BD00D09F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C133C81C72A2BD00D09F3D /* LaunchScreen.storyboard */; };
 		68C133D51C72A2BD00D09F3D /* Mini_TweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133D41C72A2BD00D09F3D /* Mini_TweetTests.swift */; };
@@ -45,10 +45,10 @@
 /* Begin PBXFileReference section */
 		0BBFBD832B382D4957D04B98 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FED6DF8FDC6A0CFBB1BE10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		687FDB641C72F944007C9848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Mini-Tweet/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		68C133BC1C72A2BD00D09F3D /* Mini-Tweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Tweet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68C133C11C72A2BD00D09F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68C133C41C72A2BD00D09F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68C133C61C72A2BD00D09F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68C133C91C72A2BD00D09F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68C133CB1C72A2BD00D09F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		68C133B31C72A2BD00D09F3D = {
 			isa = PBXGroup;
 			children = (
+				687FDB631C72F944007C9848 /* Main.storyboard */,
 				68C133BE1C72A2BD00D09F3D /* Mini-Tweet */,
 				68C133D31C72A2BD00D09F3D /* Mini-TweetTests */,
 				68C133DE1C72A2BD00D09F3D /* Mini-TweetUITests */,
@@ -139,7 +140,6 @@
 				68C133F01C72A36100D09F3D /* API */,
 				68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */,
 				68C133C11C72A2BD00D09F3D /* ViewController.swift */,
-				68C133C31C72A2BD00D09F3D /* Main.storyboard */,
 				68C133C61C72A2BD00D09F3D /* Assets.xcassets */,
 				68C133C81C72A2BD00D09F3D /* LaunchScreen.storyboard */,
 				68C133CB1C72A2BD00D09F3D /* Info.plist */,
@@ -317,9 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C133CA1C72A2BD00D09F3D /* LaunchScreen.storyboard in Resources */,
+				687FDB651C72F944007C9848 /* Main.storyboard in Resources */,
 				68C134071C72DCF600D09F3D /* favorite_16x16.png in Resources */,
 				68C133C71C72A2BD00D09F3D /* Assets.xcassets in Resources */,
-				68C133C51C72A2BD00D09F3D /* Main.storyboard in Resources */,
 				68C134061C72DCF600D09F3D /* reply_16x16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,10 +434,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		68C133C31C72A2BD00D09F3D /* Main.storyboard */ = {
+		687FDB631C72F944007C9848 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				68C133C41C72A2BD00D09F3D /* Base */,
+				687FDB641C72F944007C9848 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

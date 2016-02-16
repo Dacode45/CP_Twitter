@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Bjh-bh-1fA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINI-tweet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e7-Pc-fVh">
-                                <rect key="frame" x="91" y="78" width="138" height="33"/>
+                                <rect key="frame" x="91" y="122" width="138" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.1202408311" green="0.73285261639999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.98367584980616996" green="1" blue="0.99522403261570769" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtW-fd-Xyp">
@@ -41,24 +41,25 @@
                             <constraint firstAttribute="trailingMargin" secondItem="3e7-Pc-fVh" secondAttribute="trailing" constant="75" id="7P3-gf-SfU"/>
                             <constraint firstItem="3e7-Pc-fVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="9qV-he-G3X"/>
                             <constraint firstItem="3e7-Pc-fVh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="Lzl-Sv-Nwb"/>
-                            <constraint firstItem="xtW-fd-Xyp" firstAttribute="top" secondItem="3e7-Pc-fVh" secondAttribute="bottom" constant="94" id="QT8-Zx-vKd"/>
-                            <constraint firstItem="xtW-fd-Xyp" firstAttribute="top" secondItem="3e7-Pc-fVh" secondAttribute="bottom" constant="94" id="U2l-oF-pqO"/>
+                            <constraint firstItem="xtW-fd-Xyp" firstAttribute="top" secondItem="3e7-Pc-fVh" secondAttribute="bottom" constant="50" id="QT8-Zx-vKd"/>
+                            <constraint firstItem="xtW-fd-Xyp" firstAttribute="top" secondItem="3e7-Pc-fVh" secondAttribute="bottom" constant="50" id="U2l-oF-pqO"/>
                             <constraint firstAttribute="trailing" secondItem="xtW-fd-Xyp" secondAttribute="trailing" constant="115" id="bSF-wb-c1o"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xtW-fd-Xyp" secondAttribute="bottom" constant="311" id="tI7-sL-JMD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rkw-bv-N0o"/>
                     <connections>
-                        <segue destination="6Tx-cb-jfg" kind="modal" identifier="loginSegue" id="REI-66-HAd"/>
+                        <segue destination="dvh-Wq-t6R" kind="modal" identifier="loginSegue" id="gkF-Bd-hFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="416"/>
+            <point key="canvasLocation" x="301" y="416"/>
         </scene>
         <!--HOME-->
         <scene sceneID="8gC-jF-Xgh">
             <objects>
-                <viewController id="dvh-Wq-t6R" customClass="TweetsViewController" customModule="Mini_Tweet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetsViewController" id="dvh-Wq-t6R" customClass="TweetsViewController" customModule="Mini_Tweet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f4A-Ad-seW"/>
                         <viewControllerLayoutGuide type="bottom" id="Suc-pT-FID"/>
@@ -72,7 +73,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="141" id="mHE-Wi-8jB">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="141"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mHE-Wi-8jB" id="BZJ-9G-AGj">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
@@ -182,25 +183,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XeA-cg-EKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="416"/>
+            <point key="canvasLocation" x="883" y="416"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="eGN-Bg-wuH">
+        <scene sceneID="90z-gE-e1f">
             <objects>
-                <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="6Tx-cb-jfg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bjh-bh-1fA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ws9-Br-v8B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rX9-Bo-DSh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dvh-Wq-t6R" kind="relationship" relationship="rootViewController" id="Oiw-TI-mbU"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="v5d-F1-uYM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R5Z-EN-9JH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMp-U0-3yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195" y="416"/>
+            <point key="canvasLocation" x="-231" y="416"/>
         </scene>
     </scenes>
     <resources>
