@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		687FDB651C72F944007C9848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687FDB631C72F944007C9848 /* Main.storyboard */; };
+		687FDB681C7396A6007C9848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687FDB661C7396A6007C9848 /* Main.storyboard */; };
+		687FDB6A1C739878007C9848 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FDB691C739878007C9848 /* TweetCell.swift */; };
+		687FDB701C7399E0007C9848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB6F1C7399E0007C9848 /* UIKit.framework */; };
+		687FDB721C739D1D007C9848 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB711C739D1D007C9848 /* AFNetworking.framework */; };
+		687FDB741C739D20007C9848 /* BDBOAuth1Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB731C739D20007C9848 /* BDBOAuth1Manager.framework */; };
 		68C133C01C72A2BD00D09F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */; };
 		68C133C21C72A2BD00D09F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133C11C72A2BD00D09F3D /* ViewController.swift */; };
 		68C133C71C72A2BD00D09F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C133C61C72A2BD00D09F3D /* Assets.xcassets */; };
@@ -15,14 +19,12 @@
 		68C133D51C72A2BD00D09F3D /* Mini_TweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133D41C72A2BD00D09F3D /* Mini_TweetTests.swift */; };
 		68C133E01C72A2BD00D09F3D /* Mini_TweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133DF1C72A2BD00D09F3D /* Mini_TweetUITests.swift */; };
 		68C133F21C72A3A400D09F3D /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133F11C72A3A400D09F3D /* TwitterClient.swift */; };
-		68C133F41C72A6F300D09F3D /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C133F31C72A6F300D09F3D /* libAFNetworking.a */; };
-		68C133F61C72A6F600D09F3D /* libBDBOAuth1Manager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C133F51C72A6F600D09F3D /* libBDBOAuth1Manager.a */; };
 		68C133F91C72BC6300D09F3D /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133F81C72BC6300D09F3D /* Tweet.swift */; };
 		68C133FB1C72BC6F00D09F3D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133FA1C72BC6F00D09F3D /* User.swift */; };
 		68C133FE1C72CB1600D09F3D /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133FD1C72CB1600D09F3D /* TweetsViewController.swift */; };
 		68C134061C72DCF600D09F3D /* reply_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C134041C72DCF600D09F3D /* reply_16x16.png */; };
 		68C134071C72DCF600D09F3D /* favorite_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C134051C72DCF600D09F3D /* favorite_16x16.png */; };
-		AE913DB5F9569449E893D4D1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBFBD832B382D4957D04B98 /* libPods.a */; };
+		DE6102D11E48088FA4FA947C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3DDC2CC23CB058CB9DE347 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BBFBD832B382D4957D04B98 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FED6DF8FDC6A0CFBB1BE10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		687FDB641C72F944007C9848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Mini-Tweet/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		687FDB671C7396A6007C9848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		687FDB691C739878007C9848 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		687FDB6B1C7399D6007C9848 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		687FDB6D1C7399DA007C9848 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		687FDB6F1C7399E0007C9848 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		687FDB711C739D1D007C9848 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		687FDB731C739D20007C9848 /* BDBOAuth1Manager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BDBOAuth1Manager.framework; path = "Pods/../build/Debug-iphoneos/BDBOAuth1Manager.framework"; sourceTree = "<group>"; };
 		68C133BC1C72A2BD00D09F3D /* Mini-Tweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Tweet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68C133C11C72A2BD00D09F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +74,7 @@
 		68C133FD1C72CB1600D09F3D /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 		68C134041C72DCF600D09F3D /* reply_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reply_16x16.png; sourceTree = "<group>"; };
 		68C134051C72DCF600D09F3D /* favorite_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_16x16.png; sourceTree = "<group>"; };
+		8E3DDC2CC23CB058CB9DE347 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC01AAF2B7A768186C9F9CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68C133F61C72A6F600D09F3D /* libBDBOAuth1Manager.a in Frameworks */,
-				68C133F41C72A6F300D09F3D /* libAFNetworking.a in Frameworks */,
-				AE913DB5F9569449E893D4D1 /* libPods.a in Frameworks */,
+				687FDB741C739D20007C9848 /* BDBOAuth1Manager.framework in Frameworks */,
+				687FDB721C739D1D007C9848 /* AFNetworking.framework in Frameworks */,
+				687FDB701C7399E0007C9848 /* UIKit.framework in Frameworks */,
+				DE6102D11E48088FA4FA947C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +110,14 @@
 		31F3482B9FD61F36EBB5CAAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				687FDB731C739D20007C9848 /* BDBOAuth1Manager.framework */,
+				687FDB711C739D1D007C9848 /* AFNetworking.framework */,
+				687FDB6F1C7399E0007C9848 /* UIKit.framework */,
+				687FDB6D1C7399DA007C9848 /* libPods.a */,
+				687FDB6B1C7399D6007C9848 /* libAFNetworking.a */,
 				68C133F51C72A6F600D09F3D /* libBDBOAuth1Manager.a */,
 				68C133F31C72A6F300D09F3D /* libAFNetworking.a */,
-				0BBFBD832B382D4957D04B98 /* libPods.a */,
+				8E3DDC2CC23CB058CB9DE347 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,7 +125,6 @@
 		68C133B31C72A2BD00D09F3D = {
 			isa = PBXGroup;
 			children = (
-				687FDB631C72F944007C9848 /* Main.storyboard */,
 				68C133BE1C72A2BD00D09F3D /* Mini-Tweet */,
 				68C133D31C72A2BD00D09F3D /* Mini-TweetTests */,
 				68C133DE1C72A2BD00D09F3D /* Mini-TweetUITests */,
@@ -134,6 +147,7 @@
 		68C133BE1C72A2BD00D09F3D /* Mini-Tweet */ = {
 			isa = PBXGroup;
 			children = (
+				687FDB661C7396A6007C9848 /* Main.storyboard */,
 				68C133FF1C72DC3F00D09F3D /* Images */,
 				68C133FC1C72CAFB00D09F3D /* ViewControllers */,
 				68C133F71C72BC3F00D09F3D /* Models */,
@@ -187,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				68C133FD1C72CB1600D09F3D /* TweetsViewController.swift */,
+				687FDB691C739878007C9848 /* TweetCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -317,7 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C133CA1C72A2BD00D09F3D /* LaunchScreen.storyboard in Resources */,
-				687FDB651C72F944007C9848 /* Main.storyboard in Resources */,
+				687FDB681C7396A6007C9848 /* Main.storyboard in Resources */,
 				68C134071C72DCF600D09F3D /* favorite_16x16.png in Resources */,
 				68C133C71C72A2BD00D09F3D /* Assets.xcassets in Resources */,
 				68C134061C72DCF600D09F3D /* reply_16x16.png in Resources */,
@@ -394,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C133C21C72A2BD00D09F3D /* ViewController.swift in Sources */,
+				687FDB6A1C739878007C9848 /* TweetCell.swift in Sources */,
 				68C133F21C72A3A400D09F3D /* TwitterClient.swift in Sources */,
 				68C133FE1C72CB1600D09F3D /* TweetsViewController.swift in Sources */,
 				68C133C01C72A2BD00D09F3D /* AppDelegate.swift in Sources */,
@@ -434,10 +450,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		687FDB631C72F944007C9848 /* Main.storyboard */ = {
+		687FDB661C7396A6007C9848 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				687FDB641C72F944007C9848 /* Base */,
+				687FDB671C7396A6007C9848 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -540,6 +556,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				HEADER_SEARCH_PATHS = "$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include";
 				INFOPLIST_FILE = "Mini-Tweet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -559,6 +580,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				HEADER_SEARCH_PATHS = "$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include";
 				INFOPLIST_FILE = "Mini-Tweet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

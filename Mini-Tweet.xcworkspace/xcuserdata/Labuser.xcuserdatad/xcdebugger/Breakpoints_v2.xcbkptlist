@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mini-Tweet/TweetsViewController.swift"
-            timestampString = "477296908.035256"
+            timestampString = "477337502.544169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "reloadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Mini-Tweet/TwitterClient.swift"
-            timestampString = "477298811.737606"
+            timestampString = "477339954.784957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "openURL(_:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getUserTweets(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

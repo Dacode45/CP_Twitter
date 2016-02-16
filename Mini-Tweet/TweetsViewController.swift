@@ -9,15 +9,17 @@
 import UIKit
 
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableView: UITableView!
     var tweets: [Tweet]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("In Tweets View Controller")
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
         
         self.navigationController?.navigationBar.backgroundColor = UIColor.blueColor()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +28,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func getData(){
-        TwitterClient.sharedInstance.getUserTweets(20, completion: {(tweets:[Tweet]?, error: NSError?) in
+        TwitterClient.sharedInstance.getUserTweets({(tweets:[Tweet]?, error:NSError?) in
             if (tweets != nil){
                 self.tweets = tweets
                 self.tableView.reloadData()
@@ -37,12 +39,16 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         getData()
     }
     
+    @IBAction func signOut(sender: AnyObject) {
+        User.currentUser?.logout()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
+        cell.tweet = tweets![indexPath.row]
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

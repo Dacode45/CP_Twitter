@@ -15,16 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        print("In AppDelegate")
         // Override point for customization after application launch.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
         if User.currentUser != nil{
-            print("Current User detected \(User.currentUser)")
-            print(User.currentUser)
+            print("Current User detected \(User.currentUser?.name)")
+            print("Loaded vc")
             let vc = storyboard.instantiateViewControllerWithIdentifier("TweetsViewController") as UIViewController
             window?.rootViewController = vc
-            print("Loaded vc")
-        }else{
-            window?.rootViewController = storyboard.instantiateInitialViewController()
+            
         }
         return true
     }
@@ -58,14 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication:String?, annotation: AnyObject)-> Bool{
         TwitterClient.sharedInstance.openURL(url)
-        if User.currentUser != nil{
-            print("Current User detected")
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TweetsViewController") as UIViewController
-            window?.rootViewController = vc
-        }else{
-            window?.rootViewController = storyboard.instantiateInitialViewController()
-        }
-
                 return true
     }
 

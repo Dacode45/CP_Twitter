@@ -20,7 +20,7 @@ class User: NSObject {
     var dictionary: NSDictionary
     
     init(dictionary:NSDictionary){
-        print(dictionary)
+        //print(dictionary)
         self.dictionary = dictionary
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
@@ -36,7 +36,7 @@ class User: NSObject {
     
     class var currentUser: User?{
         get{
-        /*
+        
         if _currentUser == nil{
         if let data = NSUserDefaults.standardUserDefaults().dataForKey(_currentUserKey){
         do{
@@ -46,7 +46,7 @@ class User: NSObject {
         print("Failed to get current user from file \(dataError)")
         }
         }
-        }*/
+        }
         return _currentUser
         }
         set(user){
