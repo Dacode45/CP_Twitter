@@ -12,6 +12,14 @@
 		687FDB701C7399E0007C9848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB6F1C7399E0007C9848 /* UIKit.framework */; };
 		687FDB721C739D1D007C9848 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB711C739D1D007C9848 /* AFNetworking.framework */; };
 		687FDB741C739D20007C9848 /* BDBOAuth1Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB731C739D20007C9848 /* BDBOAuth1Manager.framework */; };
+		68BB55D91C73F4B40056C29C /* reply16x16_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55D81C73F4B40056C29C /* reply16x16_active.png */; };
+		68BB55DB1C73F4DC0056C29C /* favorite16x16_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55DA1C73F4DC0056C29C /* favorite16x16_active.png */; };
+		68BB55DD1C73FA2A0056C29C /* settings16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55DC1C73FA2A0056C29C /* settings16x16.png */; };
+		68BB55DF1C73FA6F0056C29C /* settings32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55DE1C73FA6F0056C29C /* settings32x32.png */; };
+		68BB55E11C73FFDF0056C29C /* compose32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55E01C73FFDF0056C29C /* compose32x32.png */; };
+		68BB55E31C7400310056C29C /* family32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55E21C7400310056C29C /* family32x32.png */; };
+		68BB55E61C7402530056C29C /* woman32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55E41C7402530056C29C /* woman32x32.png */; };
+		68BB55E71C7402530056C29C /* man32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 68BB55E51C7402530056C29C /* man32x32.png */; };
 		68C133C01C72A2BD00D09F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */; };
 		68C133C21C72A2BD00D09F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C133C11C72A2BD00D09F3D /* ViewController.swift */; };
 		68C133C71C72A2BD00D09F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C133C61C72A2BD00D09F3D /* Assets.xcassets */; };
@@ -53,6 +61,14 @@
 		687FDB6F1C7399E0007C9848 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		687FDB711C739D1D007C9848 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		687FDB731C739D20007C9848 /* BDBOAuth1Manager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BDBOAuth1Manager.framework; path = "Pods/../build/Debug-iphoneos/BDBOAuth1Manager.framework"; sourceTree = "<group>"; };
+		68BB55D81C73F4B40056C29C /* reply16x16_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reply16x16_active.png; sourceTree = "<group>"; };
+		68BB55DA1C73F4DC0056C29C /* favorite16x16_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite16x16_active.png; sourceTree = "<group>"; };
+		68BB55DC1C73FA2A0056C29C /* settings16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings16x16.png; sourceTree = "<group>"; };
+		68BB55DE1C73FA6F0056C29C /* settings32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings32x32.png; sourceTree = "<group>"; };
+		68BB55E01C73FFDF0056C29C /* compose32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compose32x32.png; sourceTree = "<group>"; };
+		68BB55E21C7400310056C29C /* family32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = family32x32.png; sourceTree = "<group>"; };
+		68BB55E41C7402530056C29C /* woman32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woman32x32.png; sourceTree = "<group>"; };
+		68BB55E51C7402530056C29C /* man32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man32x32.png; sourceTree = "<group>"; };
 		68C133BC1C72A2BD00D09F3D /* Mini-Tweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-Tweet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C133BF1C72A2BD00D09F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68C133C11C72A2BD00D09F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +225,14 @@
 		68C133FF1C72DC3F00D09F3D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				68BB55E41C7402530056C29C /* woman32x32.png */,
+				68BB55E51C7402530056C29C /* man32x32.png */,
+				68BB55E21C7400310056C29C /* family32x32.png */,
+				68BB55E01C73FFDF0056C29C /* compose32x32.png */,
+				68BB55DE1C73FA6F0056C29C /* settings32x32.png */,
+				68BB55DC1C73FA2A0056C29C /* settings16x16.png */,
+				68BB55DA1C73F4DC0056C29C /* favorite16x16_active.png */,
+				68BB55D81C73F4B40056C29C /* reply16x16_active.png */,
 				68C134041C72DCF600D09F3D /* reply_16x16.png */,
 				68C134051C72DCF600D09F3D /* favorite_16x16.png */,
 			);
@@ -334,8 +358,16 @@
 				68C133CA1C72A2BD00D09F3D /* LaunchScreen.storyboard in Resources */,
 				687FDB681C7396A6007C9848 /* Main.storyboard in Resources */,
 				68C134071C72DCF600D09F3D /* favorite_16x16.png in Resources */,
+				68BB55E11C73FFDF0056C29C /* compose32x32.png in Resources */,
+				68BB55E71C7402530056C29C /* man32x32.png in Resources */,
+				68BB55DD1C73FA2A0056C29C /* settings16x16.png in Resources */,
+				68BB55E61C7402530056C29C /* woman32x32.png in Resources */,
 				68C133C71C72A2BD00D09F3D /* Assets.xcassets in Resources */,
 				68C134061C72DCF600D09F3D /* reply_16x16.png in Resources */,
+				68BB55E31C7400310056C29C /* family32x32.png in Resources */,
+				68BB55D91C73F4B40056C29C /* reply16x16_active.png in Resources */,
+				68BB55DF1C73FA6F0056C29C /* settings32x32.png in Resources */,
+				68BB55DB1C73F4DC0056C29C /* favorite16x16_active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

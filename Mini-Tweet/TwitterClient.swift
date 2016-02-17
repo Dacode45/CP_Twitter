@@ -44,7 +44,9 @@ class TwitterClient: BDBOAuth1SessionManager {
     func getUserTweets(completion: (tweets:[Tweet]?, error:NSError?)->
 ()){
     let screenName : [String: String] = ["screen_name": (User.currentUser?.screenname)!]
-    GET("1.1/statuses/home_timeline.json", parameters: screenName, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+    GET("1.1/statuses/home_timeline.json", parameters: screenName, progress: { (progress) -> Void in
+            print("Progress made on getTweets")
+        }, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
         var tweets = [Tweet]()
         for tweet in response as! [NSDictionary]{
             tweets.append(Tweet(dictionary: tweet))
@@ -52,13 +54,15 @@ class TwitterClient: BDBOAuth1SessionManager {
         completion(tweets: tweets, error: nil)
         
         }, failure: { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
-            print("error getting home")
-            completion(tweets: nil, error: nil)
-    })
+        print("error getting home")
+        completion(tweets: nil, error: nil)
+        })
     }
     
     func retweet(id: Int) {
-        POST("1.1/statuses/retweet/\(String(id)).json", parameters: nil, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+        POST("1.1/statuses/retweet/\(String(id)).json", parameters: nil, progress: { (progress) -> Void in
+            print("Progress made on retweet")
+            }, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
             print("successful retweet")
             }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
                 print("failed retweet")
@@ -66,8 +70,10 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     func favorite(id: Int) {
-        POST("1.1/favorites/create.json?id=\(String(id))", parameters: nil, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
-            print("successful favorite")
+        POST("1.1/favorites/create.json?id=\(String(id))", parameters: nil, progress: { (progress) -> Void in
+            print("Progress made on favorite")
+            }, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+                print("successful favorite")
             }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
                 print("failed favorite")
         })
@@ -79,16 +85,19 @@ class TwitterClient: BDBOAuth1SessionManager {
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential(queryString: url.query), success: { (accessToken: BDBOAuth1Credential!) -> Void in
             print("Got the access token")
             TwitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
-            
-           TwitterClient.sharedInstance.GET("1.1/account/verify_credentials.json", parameters: nil, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
-                let user = User(dictionary:response as! NSDictionary)
-                User.currentUser = user
-                print("user: \(user.name)")
-                self.loginCompletion?(user: user, error: nil)
+           
+            self.GET("1.1/account/verify_credentials.json", parameters: nil, progress: { (progress) -> Void in
+                print("progress made on verify credentials")
+                }, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+                    let user = User(dictionary:response as! NSDictionary)
+                    User.currentUser = user
+                    print("user: \(user.name)")
+                    self.loginCompletion?(user: user, error: nil)
                 }, failure: { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
                     print("error getting current user")
                     self.loginCompletion?(user: nil, error: error)
             })
+           
         
             }) { (error: NSError!) -> Void in
                 print("Can't receive access token")

@@ -27,6 +27,10 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         getData()
     }
     
+    func addTableCellBorder(){
+        
+    }
+    
     func getData(){
         TwitterClient.sharedInstance.getUserTweets({(tweets:[Tweet]?, error:NSError?) in
             if (tweets != nil){
@@ -49,6 +53,17 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
         cell.tweet = tweets![indexPath.row]
+        
+        if(indexPath.row == 0){
+            let topLineView = UIView(frame: CGRectMake(0,0,self.view.bounds.size.width, 1))
+            topLineView.backgroundColor = UIColor.grayColor()
+            cell.contentView.addSubview(topLineView)
+        }
+        
+        let frame = CGRectMake(0, cell.bounds.size.height, self.view.bounds.size.width,1);
+        let bottomLineView = UIView(frame: frame)
+        bottomLineView.backgroundColor = UIColor.grayColor()
+        cell.contentView.addSubview(bottomLineView)
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
