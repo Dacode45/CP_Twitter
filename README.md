@@ -27,14 +27,14 @@ The following **additional** features are implemented:
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 1. I have to use my late day. Computer died last week, I couldn't do much work.
-I know I'm a student leader. This won't happen again. 
+I know I'm a student leader. This won't happen again.
 
-## Video Walkthrough 
+## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/tXVYlGm.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<img src='http://i.imgur.com/tXVYlGm.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![walkthrough](http://i.imgur.com/tXVYlGm.gif)
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
