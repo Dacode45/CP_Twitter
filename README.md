@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 
-<img src='http://i.imgur.com/Lliffc4.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/Lliffc4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 ![http://i.imgur.com/Lliffc4.gifv](http://i.imgur.com/Lliffc4.gifv)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
