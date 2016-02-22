@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        //let appDomain = NSBundle.mainBundle().bundleIdentifier!
+        
+        //NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
         print("In AppDelegate")
         // Override point for customization after application launch.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)

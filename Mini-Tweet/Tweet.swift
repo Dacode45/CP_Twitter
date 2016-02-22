@@ -9,7 +9,7 @@
 import UIKit
 
 class Tweet: NSObject {
-    var id: Int?
+    var id: Int
     var user: User?
     var text: String?
     var createdAtString: String?
@@ -27,7 +27,7 @@ class Tweet: NSObject {
         user = User(dictionary: dictionary["user"] as! NSDictionary)
         text = dictionary["text"] as? String
         createdAtString = dictionary["created_at"] as? String
-        id = (dictionary["id"] as? Int?)!
+        id = (dictionary["id"] as! Int)
         retweets = (dictionary["retweet_count"] as? Int?)!
         isRetweeted = (dictionary["retweeted"] as? Bool?)!
         isFavorited = (dictionary["favorited"] as? Bool?)!

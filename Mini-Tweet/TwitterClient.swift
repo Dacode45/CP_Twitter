@@ -41,6 +41,8 @@ class TwitterClient: BDBOAuth1SessionManager {
         
     }
     
+    
+    
     func getUserTweets(completion: (tweets:[Tweet]?, error:NSError?)->
 ()){
     let screenName : [String: String] = ["screen_name": (User.currentUser?.screenname)!]
@@ -59,13 +61,59 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
     }
     
-    func retweet(id: Int) {
-        POST("1.1/statuses/retweet/\(String(id)).json", parameters: nil, progress: { (progress) -> Void in
+    func getUserFromId(userID: String, completion:(user: User?, error:NSError?)->()){
+        let params : [String: String] = ["user_id": userID]
+        GET("1.1/users/show.json", parameters: params, progress: { (progress) -> Void in
+            print("Progress made on get User From ID")
+            }, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+                
+                completion(user: User(dictionary: response as! NSDictionary), error: nil)
+                
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+                print("error getting user from Id")
+                completion(user: nil, error: error)
+        })
+    }
+    
+    func retweet(id: String) {
+        POST("1.1/statuses/retweet/\(id).json", parameters: nil, progress: { (progress) -> Void in
             print("Progress made on retweet")
             }, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
             print("successful retweet")
             }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
-                print("failed retweet")
+                print("failed retweet  \(error)")
+        })
+    }
+    
+    func reply(status: String, in_reply_to_status_id: String,completion: (replyTweet:Tweet?, error:NSError?)->
+        ()){
+            let params : [String: String] = ["status": status, "in_reply_to_status_id": in_reply_to_status_id]
+            POST("1.1/statuses/update.json", parameters: params, progress: { (progress) -> Void in
+                print("Progress made on replying")
+                }, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+                    
+                    completion(replyTweet: Tweet(dictionary: response as! NSDictionary), error: nil)
+                    
+                }, failure: { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+                    print("error replying \(error)")
+                    completion(replyTweet: nil, error: error)
+            })
+    }
+    
+    func getRetweets(id: String, completion: (tweets:[Tweet]?, error:NSError?)->
+        ()){
+        GET("1.1/statuses/retweets/\(id).json", parameters: nil, progress: { (progress) -> Void in
+            print("Got Tweets")
+            }, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+                print("successful retweets")
+                var tweets = [Tweet]()
+                for tweet in response as! [NSDictionary]{
+                    tweets.append(Tweet(dictionary: tweet))
+                }
+                completion(tweets: tweets, error: nil)
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
+                print("failed to get retweets")
+                completion(tweets: nil, error: error)
         })
     }
     
@@ -89,6 +137,8 @@ class TwitterClient: BDBOAuth1SessionManager {
             self.GET("1.1/account/verify_credentials.json", parameters: nil, progress: { (progress) -> Void in
                 print("progress made on verify credentials")
                 }, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+                    //let jsonData: NSDictionary = try! (NSJSONSerialization.JSONObjectWithData(response as! NSData, options: .MutableContainers)) as! NSDictionary
+                    //print(jsonData)
                     let user = User(dictionary:response as! NSDictionary)
                     User.currentUser = user
                     print("user: \(user.name)")

@@ -57,7 +57,7 @@ class TweetCell: UITableViewCell {
     }
     @IBAction func retweet(sender: AnyObject) {
         if (tweet.isRetweeted != nil && !tweet.isRetweeted!) {
-            TwitterClient.sharedInstance.retweet(tweet.id!)
+            TwitterClient.sharedInstance.retweet(String(tweet.id))
             retweetCount.text = String("\(tweet.retweets!+1) Retweets")
             retweetCount.textColor = UIColor.greenColor()
             retweetCount.hidden = false
@@ -67,7 +67,7 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var favorite: UIButton!
     @IBAction func callFavorite(sender: AnyObject) {
         if (tweet.isFavorited != nil && !tweet.isFavorited!) {
-            TwitterClient.sharedInstance.favorite(tweet.id!)
+            TwitterClient.sharedInstance.favorite(tweet.id)
             favoriteCount.text = String("\(tweet.favorites!+1) Favorites")
             favoriteCount.textColor = UIColor.redColor()
             favoriteCount.hidden = false

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680FD01B1C7A729F004D0F97 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680FD01A1C7A729E004D0F97 /* TweetDetailViewController.swift */; };
+		680FD01D1C7A7C60004D0F97 /* RetweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680FD01C1C7A7C60004D0F97 /* RetweetCell.swift */; };
+		680FD01F1C7A8A14004D0F97 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680FD01E1C7A8A14004D0F97 /* ComposeViewController.swift */; };
 		687FDB681C7396A6007C9848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687FDB661C7396A6007C9848 /* Main.storyboard */; };
 		687FDB6A1C739878007C9848 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687FDB691C739878007C9848 /* TweetCell.swift */; };
 		687FDB701C7399E0007C9848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687FDB6F1C7399E0007C9848 /* UIKit.framework */; };
@@ -54,6 +57,9 @@
 
 /* Begin PBXFileReference section */
 		28FED6DF8FDC6A0CFBB1BE10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		680FD01A1C7A729E004D0F97 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
+		680FD01C1C7A7C60004D0F97 /* RetweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetweetCell.swift; sourceTree = "<group>"; };
+		680FD01E1C7A8A14004D0F97 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		687FDB671C7396A6007C9848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		687FDB691C739878007C9848 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		687FDB6B1C7399D6007C9848 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
@@ -218,6 +224,9 @@
 			children = (
 				68C133FD1C72CB1600D09F3D /* TweetsViewController.swift */,
 				687FDB691C739878007C9848 /* TweetCell.swift */,
+				680FD01A1C7A729E004D0F97 /* TweetDetailViewController.swift */,
+				680FD01C1C7A7C60004D0F97 /* RetweetCell.swift */,
+				680FD01E1C7A8A14004D0F97 /* ComposeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -442,7 +451,10 @@
 			files = (
 				68C133C21C72A2BD00D09F3D /* ViewController.swift in Sources */,
 				687FDB6A1C739878007C9848 /* TweetCell.swift in Sources */,
+				680FD01B1C7A729F004D0F97 /* TweetDetailViewController.swift in Sources */,
+				680FD01D1C7A7C60004D0F97 /* RetweetCell.swift in Sources */,
 				68C133F21C72A3A400D09F3D /* TwitterClient.swift in Sources */,
+				680FD01F1C7A8A14004D0F97 /* ComposeViewController.swift in Sources */,
 				68C133FE1C72CB1600D09F3D /* TweetsViewController.swift in Sources */,
 				68C133C01C72A2BD00D09F3D /* AppDelegate.swift in Sources */,
 				68C133FB1C72BC6F00D09F3D /* User.swift in Sources */,
